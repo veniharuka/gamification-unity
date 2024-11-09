@@ -16,8 +16,8 @@ public class PlayerAction : MonoBehaviour
     void Update()
     {
         // Move Value
-        float h = manager.isAction ? 0 : Input.GetAxisRaw("Horizontal");
-        float v = manager.isAction ? 0 : Input.GetAxisRaw("Vertical");
+         h = manager.isAction ? 0 : Input.GetAxisRaw("Horizontal");
+         v = manager.isAction ? 0 : Input.GetAxisRaw("Vertical");
 
         // Check Button Down & Up
         bool hDown = manager.isAction ? false : Input.GetButtonDown("Horizontal");
