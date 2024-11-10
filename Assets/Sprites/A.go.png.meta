@@ -1,38 +1,19 @@
 fileFormatVersion: 2
-guid: 2f90eb840bd0cf4438d49759bc08d718
-AssetOrigin:
-  serializedVersion: 1
-  productId: 188718
-  packageName: Top-Down 2D RPG Assets Pack
-  packageVersion: 1.0
-  assetPath: Assets/Sprites/NPC.png
-  uploadId: 417218
+guid: 98e1d1040e9a0ab48be52c6968f74fad
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7740792752860969874
-    second: TopDown_NPC_0
+      213: 6919048966474221861
+    second: ago_0
   - first:
-      213: -5383561740659237547
-    second: TopDown_NPC_1
+      213: -4942845203265682648
+    second: ago_1
   - first:
-      213: -5184345850046446626
-    second: TopDown_NPC_2
+      213: -8821621641293978419
+    second: ago_2
   - first:
-      213: -6778634467473319316
-    second: TopDown_NPC_3
-  - first:
-      213: -1940738496428130850
-    second: Luna 0
-  - first:
-      213: -6131185593638097393
-    second: Luna 1
-  - first:
-      213: 5084661014962647745
-    second: Ludo 0
-  - first:
-      213: -4896452150530583312
-    second: Ludo 1
+      213: -6555763057052525912
+    second: ago_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -65,12 +46,12 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: 0
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -79,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -96,14 +77,14 @@ TextureImporter:
   ignorePngGamma: 0
   applyGammaDecoding: 0
   swizzle: 50462976
-  cookieLightType: 1
+  cookieLightType: 0
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 256
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,36 +94,10 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: Standalone
-    maxTextureSize: 256
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 256
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 256
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -154,89 +109,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Luna 0
+      name: ago_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 51
-        width: 16
-        height: 16
+        x: 38
+        y: 1
+        width: 170
+        height: 280
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: eddb976be9c1115e0800000000000000
-      internalID: -1940738496428130850
+      spriteID: 529ca365066650060800000000000000
+      internalID: 6919048966474221861
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Luna 1
+      name: ago_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 34
-        width: 16
-        height: 16
+        x: 294
+        y: 1
+        width: 165
+        height: 284
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: f0e653fdf27a9eaa0800000000000000
-      internalID: -6131185593638097393
+      spriteID: 8230b97d97c776bb0800000000000000
+      internalID: -4942845203265682648
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ludo 0
+      name: ago_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 17
-        width: 16
-        height: 16
+        x: 523
+        y: 1
+        width: 174
+        height: 284
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 1c23020e048509640800000000000000
-      internalID: 5084661014962647745
+      spriteID: dc426cf2bdd439580800000000000000
+      internalID: -8821621641293978419
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ludo 1
+      name: ago_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 16
-        height: 16
+        x: 762
+        y: 24
+        width: 187
+        height: 200
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 0f45deb26be4c0cb0800000000000000
-      internalID: -4896452150530583312
+      spriteID: 8aa51c8cb304505a0800000000000000
+      internalID: -6555763057052525912
       vertices: []
       indices: 
       edges: []
@@ -245,7 +200,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5b09594aa39374849bb4f0395b4a5347
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -255,10 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Ludo 0: 5084661014962647745
-      Ludo 1: -4896452150530583312
-      Luna 0: -1940738496428130850
-      Luna 1: -6131185593638097393
+      ago_0: 6919048966474221861
+      ago_1: -4942845203265682648
+      ago_2: -8821621641293978419
+      ago_3: -6555763057052525912
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
