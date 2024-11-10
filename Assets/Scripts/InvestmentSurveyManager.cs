@@ -65,7 +65,10 @@ public class InvestmentSurveyManager : MonoBehaviour
             gradePanel.SetActive(false);
         // 확인 버튼 이벤트 리스너 추가
         if (confirmButton != null)
+        {
+            confirmButton.onClick.RemoveAllListeners();  // 기존 리스너 제거
             confirmButton.onClick.AddListener(OnConfirmButtonClick);
+        }
         // 리스트 초기화
         currentAnswerButtons = new List<Button>();
 
@@ -74,7 +77,22 @@ public class InvestmentSurveyManager : MonoBehaviour
     }
     private void OnConfirmButtonClick()
     {
+        // 설문 완료 시 패널 닫기
         surveyPanel.SetActive(false);
+
+        // 필요한 경우 초기 상태로 리셋
+        currentQuestionIndex = 0;
+        yesCount = 0;
+
+        // 버튼들 제거
+        foreach (var button in currentAnswerButtons)
+        {
+            if (button != null)
+            {
+                Destroy(button.gameObject);
+            }
+        }
+        currentAnswerButtons.Clear();
     }
     public void SelectAnswer(int answerIndex)
     {
@@ -228,16 +246,15 @@ public class InvestmentSurveyManager : MonoBehaviour
         }
 
         // 결과 표시
-        if (gradeText != null)
+        if (questionText != null)
         {
-            // ContentPanel 비활성화
-            if (answerPanel != null)
-                answerPanel.SetActive(false);
-            if (questionText != null)
-                questionText.text = "";
+            questionText.text = $"\n\n투자성향 분석 결과\n\n{grade}\n\n{description}";
+        }
 
-            gradePanel.SetActive(true);  // 결과 패널 표시
-            gradeText.text = $"고객님의 투자성향은\n\n{grade}\n\n입니다!\n\n{description}";
+        // 답변 패널 숨기기
+        if (answerPanel != null)
+        {
+            answerPanel.SetActive(false);
         }
 
         Debug.Log($"설문이 완료되었습니다. 최종 등급: {grade}");
@@ -268,7 +285,7 @@ public class InvestmentSurveyManager : MonoBehaviour
     {
         if (questionText != null)
         {
-            questionText.text = $"Q{currentQuestionIndex + 1}. {questions[currentQuestionIndex]}";
+            questionText.text = $"Q{currentQuestionIndex+1}. {questions[currentQuestionIndex]}";
         }
 
         // 기존 버튼들 제거
@@ -292,42 +309,39 @@ public class InvestmentSurveyManager : MonoBehaviour
         }
 
         string[] currentAnswers = answerOptions[currentQuestionIndex];
-        for (int i = 0; i < currentAnswers.Length; i++)
+        for (int i = 0; i < 2; i++)
         {
             // 버튼 생성
             Button newButton = Instantiate(answerButtonPrefab, answerPanel.transform);
+            newButton.name = $"AnswerButton_{i}";
 
-            // 버튼의 이미지 설정 (배경 유지)
-            Image buttonImage = newButton.GetComponent<Image>();
-            if (buttonImage != null)
+            // 모든 Image 컴포넌트 찾기
+            Image[] images = newButton.GetComponentsInChildren<Image>();
+            foreach (var image in images)
             {
-                buttonImage.color = Color.white;  // 배경색 설정
+                // 버튼의 직계 Image만 유지하고 나머지는 비활성화
+                if (image.gameObject == newButton.gameObject)
+                {
+                    image.color = Color.white;
+                }
+                else
+                {
+                    image.enabled = false;
+                }
             }
 
             // Text 설정
             TextMeshProUGUI buttonText = newButton.GetComponentInChildren<TextMeshProUGUI>();
             if (buttonText != null)
             {
-                buttonText.text = currentAnswers[i];
-                buttonText.fontSize = 18;
-                buttonText.alignment = TextAlignmentOptions.Center;
-                buttonText.color = Color.black;
-
-                // 버튼 Text의 부모 오브젝트에 있는 Image 컴포넌트를 찾아서 비활성화
-                Image textBackgroundImage = buttonText.transform.parent.GetComponent<Image>();
-                if (textBackgroundImage != null && textBackgroundImage != buttonImage)
-                {
-                    textBackgroundImage.enabled = false;
-                }
+                buttonText.text = currentAnswers[i];  // "예" 또는 "아니오"
             }
 
             int answerIndex = i;
             newButton.onClick.AddListener(() => SelectAnswer(answerIndex));
-
             currentAnswerButtons.Add(newButton);
         }
     }
-
     private void HighlightSelectedButton(Button selectedButton)
     {
         if (currentAnswerButtons == null) return;
