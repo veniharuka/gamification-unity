@@ -5,13 +5,14 @@ MonoImporter:
   serializedVersion: 2
   defaultReferences:
   - surveyPanel: {instanceID: 0}
-  - nextButton: {instanceID: 0}
-  - prevButton: {instanceID: 0}
-  - closeButton: {instanceID: 0}
   - questionText: {instanceID: 0}
   - answerPanel: {instanceID: 0}
-  - answerButtonPrefab: {instanceID: 0}
+  - answerButtonPrefab: {fileID: 1613696795248793816, guid: 6f657ca90315e1d4b8d7b1f929932584, type: 3}
   - gradeText: {instanceID: 0}
+  - gradePanel: {instanceID: 0}
+  - confirmButton: {instanceID: 0}
+  - startPanel: {instanceID: 0}
+  - startButton: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
