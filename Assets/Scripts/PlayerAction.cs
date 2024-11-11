@@ -28,12 +28,12 @@ public class PlayerAction : MonoBehaviour
         bool vUp = manager.isAction ? false :Input.GetButtonUp("Vertical");
 
         // Check Horizontal Move
-        //if (hDown)
-        //  isHorizonMove = true;
-        //else if (vDown)
-        //  isHorizonMove = false;
-        //else if (hUp || vUp)
-        //  isHorizonMove = (h != 0);
+        if (hDown)
+         isHorizonMove = true;
+        else if (vDown)
+         isHorizonMove = false;
+        else if (hUp || vUp)
+         isHorizonMove = (h != 0);
 
         // Animation
         //if (anim.GetInteger("hAxisRaw") != h)
