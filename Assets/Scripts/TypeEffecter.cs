@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
@@ -9,7 +10,7 @@ public class TypeEffect : MonoBehaviour
     public int CharPerSeconds;
     public bool isAnim;
 
-    Text msgText;
+    TextMeshProUGUI msgText;
     AudioSource audioSource;
     string targetMsg;
     int index;
@@ -17,8 +18,22 @@ public class TypeEffect : MonoBehaviour
 
     private void Awake()
     {
-        msgText = GetComponent<Text>();
+        msgText = GetComponent<TextMeshProUGUI>();
         audioSource = GetComponent<AudioSource>();
+        if (msgText == null)
+        {
+            Debug.LogError("msgText가 할당되지 않았습니다. TextMeshProUGUI 컴포넌트를 확인하세요.");
+        }
+
+        if (audioSource == null)
+        {
+            Debug.LogError("AudioSource가 할당되지 않았습니다. AudioSource 컴포넌트를 확인하세요.");
+        }
+
+        if (EndCursor == null)
+        {
+            Debug.LogError("EndCursor가 할당되지 않았습니다. EndCursor 오브젝트를 확인하세요.");
+        }
     }
 
     public void SetMsg(string msg)

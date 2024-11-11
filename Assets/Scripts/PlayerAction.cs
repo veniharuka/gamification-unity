@@ -65,13 +65,28 @@ public class PlayerAction : MonoBehaviour
         //else if (hDown && h == 1) dirVec = Vector3.right;
 
         // Scan Object (for interaction)
-        if (Input.GetButtonDown("Jump") && scanObject != null)
+        if (Input.GetKeyDown(KeyCode.Space) && scanObject != null)
         {
             //Debug.Log("This is: " + scanObject.name);
             manager.Action(scanObject);
         }
     }
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        // NPC 태그를 가진 오브젝트와 충돌할 때만 대화 가능한 상태로 설정
+        if (collision.CompareTag("NPC"))
+        {
+            scanObject = collision.gameObject; // NPC를 scanObject에 저장
+        }
+    }
 
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("NPC"))
+        {
+            scanObject = null; // 범위를 벗어나면 대화 불가능 상태로 설정
+        }
+    }
 
     void FixedUpdate()
     {
