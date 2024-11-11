@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 535ad1f44226cba4380ea143942b14e5
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - questionText: {instanceID: 0}
+  - oButton: {instanceID: 0}
+  - xButton: {instanceID: 0}
+  - linkButton1: {instanceID: 0}
+  - linkButton2: {instanceID: 0}
+  - financeImage: {fileID: 4340125019137379325, guid: 987e420e6eaf8cd409d0eec72ea32a1c, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

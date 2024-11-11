@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 162ae1c24f8f3e84b8ebb78a7c18f047
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - surveyPanel: {instanceID: 0}
+  - nextButton: {instanceID: 0}
+  - prevButton: {instanceID: 0}
+  - closeButton: {instanceID: 0}
+  - questionText: {instanceID: 0}
+  - answerPanel: {instanceID: 0}
+  - answerButtonPrefab: {instanceID: 0}
+  - gradeText: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
