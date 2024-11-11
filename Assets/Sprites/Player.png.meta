@@ -5,7 +5,7 @@ AssetOrigin:
   productId: 188718
   packageName: Top-Down 2D RPG Assets Pack
   packageVersion: 1.0
-  assetPath: Assets/TopDown 2D RPG BE3/Sprites/Player.png
+  assetPath: Assets/Sprites/Player.png
   uploadId: 417218
 TextureImporter:
   internalIDToNameTable:

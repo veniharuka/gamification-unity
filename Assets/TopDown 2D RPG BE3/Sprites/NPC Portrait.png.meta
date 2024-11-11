@@ -1,38 +1,38 @@
 fileFormatVersion: 2
-guid: 2f90eb840bd0cf4438d49759bc08d718
+guid: d79edf18a76e2654a9ac99f15de8b2b3
 AssetOrigin:
   serializedVersion: 1
   productId: 188718
   packageName: Top-Down 2D RPG Assets Pack
   packageVersion: 1.0
-  assetPath: Assets/Sprites/NPC.png
+  assetPath: Assets/TopDown 2D RPG BE3/Sprites/NPC Portrait.png
   uploadId: 417218
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7740792752860969874
-    second: TopDown_NPC_0
+      213: 21300000
+    second: Luna Idle
   - first:
-      213: -5383561740659237547
-    second: TopDown_NPC_1
+      213: 21300002
+    second: Luna Talk
   - first:
-      213: -5184345850046446626
-    second: TopDown_NPC_2
+      213: 21300004
+    second: Luna Smile
   - first:
-      213: -6778634467473319316
-    second: TopDown_NPC_3
+      213: 21300006
+    second: Luna Angry
   - first:
-      213: -1940738496428130850
-    second: Luna 0
+      213: 21300008
+    second: Ludo Idle
   - first:
-      213: -6131185593638097393
-    second: Luna 1
+      213: 21300010
+    second: Ludo Talk
   - first:
-      213: 5084661014962647745
-    second: Ludo 0
+      213: 21300012
+    second: Ludo Smile
   - first:
-      213: -4896452150530583312
-    second: Ludo 1
+      213: 21300014
+    second: Ludo Angry
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -70,7 +70,7 @@ TextureImporter:
     mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: 0
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -79,7 +79,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 24
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -94,7 +94,7 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 0
+  applyGammaDecoding: 1
   swizzle: 50462976
   cookieLightType: 1
   platformSettings:
@@ -154,13 +154,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Luna 0
+      name: Luna Idle
       rect:
         serializedVersion: 2
         x: 0
-        y: 51
-        width: 16
-        height: 16
+        y: 47
+        width: 34
+        height: 46
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,20 +169,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eddb976be9c1115e0800000000000000
-      internalID: -1940738496428130850
+      spriteID: 7e8cbec21ad9a5146a6399e187f79581
+      internalID: 21300000
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Luna 1
+      name: Luna Talk
       rect:
         serializedVersion: 2
-        x: 0
-        y: 34
-        width: 16
-        height: 16
+        x: 35
+        y: 47
+        width: 34
+        height: 46
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -191,20 +191,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0e653fdf27a9eaa0800000000000000
-      internalID: -6131185593638097393
+      spriteID: d10d1fb6ab8887743bcc7bd68c6741db
+      internalID: 21300002
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ludo 0
+      name: Luna Smile
       rect:
         serializedVersion: 2
-        x: 0
-        y: 17
-        width: 16
-        height: 16
+        x: 70
+        y: 47
+        width: 34
+        height: 46
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,20 +213,42 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c23020e048509640800000000000000
-      internalID: 5084661014962647745
+      spriteID: 8d0300f67d92ace47949343e5fdd231c
+      internalID: 21300004
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ludo 1
+      name: Luna Angry
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 47
+        width: 34
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2b3732da275df34fbc4cb7c50f9cedb
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ludo Idle
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 16
+        width: 34
+        height: 46
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,8 +257,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f45deb26be4c0cb0800000000000000
-      internalID: -4896452150530583312
+      spriteID: 4843ffde443d13441982a64d625783d1
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ludo Talk
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 0
+        width: 34
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e21efaca3ed60ec4ea3bae9cada96e5d
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ludo Smile
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 0
+        width: 34
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5659a6b8893ed4c4d81d88ec467912bf
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ludo Angry
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 0
+        width: 34
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dc061a7811deba4d9b619fc30822d12
+      internalID: 21300014
       vertices: []
       indices: 
       edges: []
@@ -245,7 +333,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5b09594aa39374849bb4f0395b4a5347
+    spriteID: fee967a87b2e38d46a8002bf33a83ea2
     internalID: 0
     vertices: []
     indices: 
@@ -255,10 +343,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Ludo 0: 5084661014962647745
-      Ludo 1: -4896452150530583312
-      Luna 0: -1940738496428130850
-      Luna 1: -6131185593638097393
+      Ludo Angry: 21300014
+      Ludo Idle: 21300008
+      Ludo Smile: 21300012
+      Ludo Talk: 21300010
+      Luna Angry: 21300006
+      Luna Idle: 21300000
+      Luna Smile: 21300004
+      Luna Talk: 21300002
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
