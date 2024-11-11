@@ -3,23 +3,29 @@ using UnityEngine;
 public class PlayerAction : MonoBehaviour
 {
     public float Speed;
+
     public GameManager manager;
     Rigidbody2D rigid;
-    float h;
-    float v;
+    SpriteRenderer spriter;
     GameObject scanObject;
+    Animator anim;
+
+
+    Vector2 inputVec;
     bool isHorizonMove;
 
     void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
+        spriter = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
     }
 
     void Update()
     {
         // Move Value
-         h = manager.isAction ? 0 : Input.GetAxisRaw("Horizontal");
-         v = manager.isAction ? 0 : Input.GetAxisRaw("Vertical");
+        inputVec.x = manager.isAction ? 0 : Input.GetAxisRaw("Horizontal");
+        inputVec.y = manager.isAction ? 0 : Input.GetAxisRaw("Vertical");
 
         // Check Button Down & Up
         bool hDown = manager.isAction ? false : Input.GetButtonDown("Horizontal");
@@ -33,9 +39,10 @@ public class PlayerAction : MonoBehaviour
         else if (vDown)
          isHorizonMove = false;
         else if (hUp || vUp)
-         isHorizonMove = (h != 0);
+            isHorizonMove = inputVec.x != 0;
 
         // Animation
+        anim.SetFloat("Speed", inputVec.sqrMagnitude);
         //if (anim.GetInteger("hAxisRaw") != h)
         //{
         //    anim.SetBool("isChange", true);
@@ -68,7 +75,17 @@ public class PlayerAction : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector2 moveVec = isHorizonMove ? new Vector2(h, 0) : new Vector2(0, v);
+        Vector2 moveVec = isHorizonMove ? new Vector2(inputVec.x, 0) : new Vector2(0, inputVec.y);
         rigid.linearVelocity = moveVec * Speed;
+    }
+
+    void LateUpdate()
+    {
+        anim.SetFloat("Speed", inputVec.sqrMagnitude);
+
+        if (inputVec.x != 0)
+        {
+            spriter.flipX = inputVec.x < 0;
+        }
     }
 }
