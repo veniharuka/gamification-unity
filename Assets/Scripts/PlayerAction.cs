@@ -2,11 +2,13 @@ using UnityEngine;
 
 public class PlayerAction : MonoBehaviour
 {
+    public float Speed;
     public GameManager manager;
     Rigidbody2D rigid;
     float h;
     float v;
     GameObject scanObject;
+    bool isHorizonMove;
 
     void Awake()
     {
@@ -66,6 +68,7 @@ public class PlayerAction : MonoBehaviour
 
     void FixedUpdate()
     {
-        rigid.linearVelocity = new Vector2(h, v);
+        Vector2 moveVec = isHorizonMove ? new Vector2(h, 0) : new Vector2(0, v);
+        rigid.linearVelocity = moveVec * Speed;
     }
 }
