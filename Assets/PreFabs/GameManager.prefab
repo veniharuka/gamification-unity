@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8382020949893377968
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5039539614469471739}
+  - component: {fileID: 4943542175141241126}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5039539614469471739
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8382020949893377968}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 611.1207, y: 233.853, z: -8.221859}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4943542175141241126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8382020949893377968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faf80cd4214a30445b50be8f80efe5cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  choicePanel: {fileID: 8670930126782552385, guid: 1e814574dd4d18242beeae8ddc3bb7df, type: 3}
+  financeQuizPanel: {fileID: 2955594771953553791, guid: 9e448cd59a80fc84abdc5d2b266890b3, type: 3}
+  yesButton: {fileID: 2500284904166438806, guid: 98ffe70db63af714e8383e869e67f182, type: 3}
+  noButton: {fileID: 2152951108831771682, guid: 69e25f579d099c447a45c1750acb4870, type: 3}
+  yesText: {fileID: 6238338119704431222, guid: c3bb3079f6b9fc34baf9de8e61cc5b63, type: 3}
+  noText: {fileID: 1043759508354852901, guid: 14c019d54283c9041b910e859618a646, type: 3}
+  arrow: {fileID: 2062155877736876552, guid: c47c404a458a99d4ea81be5b91ecb08a, type: 3}
+  talkManager: {fileID: 1126124126051322822, guid: 716f52ba335afa145ab24bf148a67ad7, type: 3}
+  questManager: {fileID: 957234312491502458, guid: 55873cc22194ae440b18ef9f965fcec8, type: 3}
+  talkPanel: {fileID: 5046517523048080828, guid: 22135cac9e265374f892d4feae7b74b0, type: 3}
+  protraitIAnim: {fileID: 8506088283032392419, guid: 234546f5b6d6c6a46bd28bdc9448b449, type: 3}
+  protraitImg: {fileID: 343290761385507680, guid: 234546f5b6d6c6a46bd28bdc9448b449, type: 3}
+  prevPortrait: {fileID: 0}
+  talk: {fileID: 7642008713304305410, guid: 3c1e8c92fe6855047b96b14c93793b6d, type: 3}
+  scanObject: {fileID: 0}
+  isAction: 0
+  talkIndex: 0

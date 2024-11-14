@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class GameManager :  MonoBehaviour
 {
     public GameObject choicePanel;
+    public GameObject financeQuizPanel;  
     public Button yesButton;
     public Button noButton;
     public TextMeshProUGUI yesText;  
@@ -30,10 +31,28 @@ public class GameManager :  MonoBehaviour
 
     void Start()
     {
-        // 패널과 버튼을 비활성화합니다.
-        choicePanel.SetActive(false);
+        // choicePanel 초기화 및 HideFlags 설정
+        if (choicePanel != null)
+        {
+            choicePanel.hideFlags = HideFlags.None;
+            choicePanel.SetActive(false);
+        }
+        else
+        {
+            Debug.LogError("choicePanel이 할당되지 않았습니다. Inspector에서 choicePanel을 연결해주세요.");
+        }
 
-        // 버튼 클릭 시 이벤트 연결
+
+        // 시작 시 financeQuizPanel 비활성화
+        if (financeQuizPanel != null)
+        {
+            financeQuizPanel.SetActive(false);
+        }
+        else
+        {
+            Debug.LogError("FinanceQuiz 오브젝트가 Inspector에서 연결되지 않았습니다.");
+        }
+
         yesButton.onClick.AddListener(OnYesButtonClicked);
         noButton.onClick.AddListener(OnNoButtonClicked);
     }
@@ -120,9 +139,15 @@ public class GameManager :  MonoBehaviour
 
     void OnYesButtonClicked()
     {
-        Debug.Log("플레이어가 '예'를 선택했습니다.");
         choicePanel.SetActive(false);
-        // 예를 선택했을 때 실행할 로직 추가
+        if (financeQuizPanel != null)
+        {
+            financeQuizPanel.SetActive(true);
+        }
+        else
+        {
+            Debug.LogError("FinanceQuiz 오브젝트가 Inspector에서 연결되지 않았습니다.");
+        }
     }
 
     void OnNoButtonClicked()
@@ -132,6 +157,17 @@ public class GameManager :  MonoBehaviour
         // 아니오를 선택했을 때 실행할 로직 추가
     }
 
+    public void CloseQuiz()
+    {
+        Debug.Log("돌아가기 버튼이 클릭되었습니다.");
+    if (financeQuizPanel != null)
+    {
+        financeQuizPanel.SetActive(false); // FinanceQuiz 패널을 비활성화하여 창을 닫음
+    }
+    else
+    {
+        Debug.LogError("FinanceQuiz 패널을 찾을 수 없습니다.");
+    }    }
 
     // 화살표 위치를 변경하는 함수
     void HandleArrowMovement()
