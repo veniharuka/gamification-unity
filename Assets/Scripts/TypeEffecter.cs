@@ -34,6 +34,11 @@ public class TypeEffect : MonoBehaviour
         {
             Debug.LogError("EndCursor가 할당되지 않았습니다. EndCursor 오브젝트를 확인하세요.");
         }
+        else
+        {
+            // HideFlags 초기화
+            EndCursor.hideFlags = HideFlags.None;
+        }
     }
 
     public void SetMsg(string msg)

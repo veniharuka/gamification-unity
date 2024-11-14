@@ -17,6 +17,7 @@ public class ExampleScript : MonoBehaviour
             Debug.LogError("Animator가 올바르게 할당되어 있는지 확인하세요.");
         }
     }
+
     public void start()
     {
         // 애니메이션 시작 시 실행할 코드
@@ -27,5 +28,12 @@ public class ExampleScript : MonoBehaviour
     {
         // 애니메이션 끝날 때 실행할 코드
         Debug.Log("PortraitEffect 애니메이션이 종료되었습니다.");
+    }
+
+    // 애니메이션 이벤트로 호출할 함수 추가
+    public void OnPortraitEffectComplete()
+    {
+        Debug.Log("PortraitEffect 애니메이션이 완료되었습니다.");
+        // 추가 작업을 이곳에 넣으세요.
     }
 }

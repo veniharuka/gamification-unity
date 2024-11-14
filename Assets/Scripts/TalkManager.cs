@@ -74,4 +74,15 @@ public class TalkManager : MonoBehaviour
             return "TalkManager 스크립트에 대화 데이터를 연결해주세요.";
         }
     }
+
+    // 대화 데이터의 길이를 반환하는 메서드
+    public int GetTalkDataLength(int id)
+    {
+        if (talkData.ContainsKey(id))
+        {
+            return talkData[id].Length;
+        }
+        return 0; // 대화 데이터가 없으면 0을 반환
+    }
+
 }
