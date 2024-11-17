@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5253624136640118328
+--- !u!1 &2320888141733247706
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2369491240942035075}
-  - component: {fileID: 8601101872198365846}
-  - component: {fileID: 2215304089154715}
+  - component: {fileID: 1944895415653293011}
+  - component: {fileID: 7347153524926261995}
+  - component: {fileID: 6136230449058524273}
   m_Layer: 5
   m_Name: GradeText
   m_TagString: Untagged
@@ -18,13 +18,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &2369491240942035075
+--- !u!224 &1944895415653293011
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5253624136640118328}
+  m_GameObject: {fileID: 2320888141733247706}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -32,26 +32,26 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 150, y: -35}
   m_SizeDelta: {x: 260, y: 200}
   m_Pivot: {x: 0.5, y: 1}
---- !u!222 &8601101872198365846
+--- !u!222 &7347153524926261995
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5253624136640118328}
+  m_GameObject: {fileID: 2320888141733247706}
   m_CullTransparentMesh: 1
---- !u!114 &2215304089154715
+--- !u!114 &6136230449058524273
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5253624136640118328}
+  m_GameObject: {fileID: 2320888141733247706}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
@@ -65,12 +65,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Grade
-
-'
+  m_text: "\uACE0\uAC1D\uB2D8\uC758 \uD22C\uC790\uC131\uD5A5\uC740\n\n4\uB4F1\uAE09(\uC911\uB9BD\uD615)\n\uC6D0\uAE08
+    \uC190\uC2E4\uACFC \uC774\uC775 \uAC00\uB2A5\uC131\uC774 \uADE0\uD615\uC744 \uC774\uB8E8\uB294
+    \uC0C1\uD488\uC744 \uC120\uD638\uD558\uB294 \uD22C\uC790\uC790\uC785\uB2C8\uB2E4."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d1ba18951ad51f646806ba7c6414a6dd, type: 2}
-  m_sharedMaterial: {fileID: -1018609168385799231, guid: d1ba18951ad51f646806ba7c6414a6dd, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c6483fb315fbe1045a954ec8edb91d35, type: 2}
+  m_sharedMaterial: {fileID: -8191203397242078486, guid: c6483fb315fbe1045a954ec8edb91d35, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -94,8 +94,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 18
+  m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
