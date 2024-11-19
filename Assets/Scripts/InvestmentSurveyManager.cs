@@ -240,15 +240,14 @@ public class InvestmentSurveyManager : MonoBehaviour
         if (yesButton != null) yesButton.interactable = true;
         if (noButton != null) noButton.interactable = true;
     }
-
     private (string grade, string description) CalculateGrade()
     {
-        if (yesCount <= 1) return ("6등급(매우낮은위험)", "원금 손실의 위험이 매우 낮은 상품을 선호하는 투자자");
-        if (yesCount <= 3) return ("5등급(낮은위험)", "원금 손실의 위험이 낮은 상품을 선호하는 투자자");
-        if (yesCount <= 5) return ("4등급(중립형)", "원금 손실과 이익 가능성이 균형을 이루는 상품을 선호하는 투자자");
-        if (yesCount <= 7) return ("3등급(적극투자형)", "높은 수익을 위해 높은 위험을 감수할 수 있는 투자자");
-        if (yesCount <= 9) return ("2등급(공격투자형)", "매우 높은 수익을 위해 높은 위험을 감수할 수 있는 투자자");
-        return ("1등급(위험선호형)", "투자 위험을 적극적으로 수용하고 높은 수익을 추구하는 투자자");
+        if (yesCount <= 1) return ("6등급(매우낮은위험)", "원금 손실의 위험이 매우 낮은 상품을 선호하는 투자자입니다.\n\n맞춤 상품이 궁금하신가요?\n지금 바로 확인해보세요!");
+        if (yesCount <= 3) return ("5등급(낮은위험)", "원금 손실의 위험이 낮은 상품을 선호하는 투자자입니다.\n\n맞춤 상품이 궁금하신가요?\n지금 바로 확인해보세요!");
+        if (yesCount <= 5) return ("4등급(중립형)", "원금 손실과 이익 가능성이 균형을 이루는 상품을 선호하는 투자자입니다.\n\n맞춤 상품이 궁금하신가요?\n지금 바로 확인해보세요!");
+        if (yesCount <= 7) return ("3등급(적극투자형)", "높은 수익을 위해 높은 위험을 감수할 수 있는 투자자입니다.\n\n맞춤 상품이 궁금하신가요?\n지금 바로 확인해보세요!");
+        if (yesCount <= 9) return ("2등급(공격투자형)", "매우 높은 수익을 위해 높은 위험을 감수할 수 있는 투자자입니다.\n\n맞춤 상품이 궁금하신가요?\n지금 바로 확인해보세요!");
+        return ("1등급(위험선호형)", "투자 위험을 적극적으로 수용하고 높은 수익을 추구하는 투자자입니다.\n\n맞춤 상품이 궁금하신가요?\n지금 바로 확인해보세요!");
     }
 
     private void CompleteSurvey()
@@ -262,7 +261,7 @@ public class InvestmentSurveyManager : MonoBehaviour
         urlButton.gameObject.SetActive(true);    // URL 버튼 활성화
 
         var (grade, description) = CalculateGrade();
-        gradeText.text = $"고객님의 투자성향은\n\n{grade}\n{description}입니다.";
+        gradeText.text = $"고객님의 투자성향은\n\n{grade}\n{description}";
     }
     private void InitializeSurvey()
     {
